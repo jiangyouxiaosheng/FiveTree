@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
         Vector2 position = transform.position;
         if (xMove != 0 && yMove != 0)
         {
+            transform.localScale = new Vector3(xMove, 1, 1);
             position.x = position.x + playerAttribute.playerMoveSpeed * 0.7f * xMove * Time.deltaTime;
             position.y = position.y + playerAttribute.playerMoveSpeed * 0.7f * yMove * Time.deltaTime;
 
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
         {
             if (xMove != 0)
             {
+                transform.localScale = new Vector3(xMove, 1, 1);
                 position.x = position.x + playerAttribute.playerMoveSpeed * xMove * Time.deltaTime;//Time.deltaTime在小技巧中有讲,speed在最开始赋值，或者外部赋值
             }
             if (yMove != 0)
@@ -46,12 +48,9 @@ public class PlayerController : MonoBehaviour
         }
    
         transform.position = position;
-
+      
     }
 
 
-    public void PlayerNormalAttack()
-    {
-
-    }
+  
 }

@@ -89,6 +89,8 @@ namespace ObjectPool
             {
                 GameObject a = Instantiate(Go, Vector3.zero, Quaternion.identity);
                 a.SetActive(false);
+                a.transform.SetParent(transform);
+              //  a.transform.SetParent();
                 PoolObject b = a.GetComponent<PoolObject>();
                 pool.Add(b);
             }

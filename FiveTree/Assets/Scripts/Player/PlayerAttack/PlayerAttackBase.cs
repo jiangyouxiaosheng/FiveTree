@@ -5,17 +5,19 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerAttackBase 
+[CreateAssetMenu(fileName = "BulletData", menuName = "PlayerSkills/skillData", order = 0)]
+public class PlayerAttackBase :ScriptableObject
 {
     [Header("技能基础数据")]
-    private PlayerAttackEnum attackEnum = PlayerAttackEnum.None;//类型
-    private string skillName = "";//名称
-    private int skillDamege = 0;//伤害
-    private float skillCD = 0;//技能CD
-    private int skillNeedConsume = 0;//消耗
-    private float skillNeedTime = 0;//咏唱所需时间
-    private bool isNeedTarget;//是否为指定目标
-    private string skillForTarget = "";//目标
+    public PlayerAttackEnum attackEnum = PlayerAttackEnum.None;//类型
+    public string skillName = "";//名称
+    public int skillDamege = 0;//伤害
+    public float skillCD = 0;//技能CD
+    public int skillNeedConsume = 0;//消耗
+    public float skillNeedTime = 0;//咏唱所需时间
+    public bool isNeedTarget;//是否为指定目标
+    public string skillForTarget = "";//目标
+    public float skillSpeed;
 
 
   
@@ -25,9 +27,9 @@ public class PlayerAttackBase
 
     [Header("技能UI相关")]
     [SerializeField]
-    private Image skillImage;//技能图标
+    public Image skillImage;//技能图标
     [SerializeField]
-    private string skillIntroduce="";//技能简介
+    public string skillIntroduce="";//技能简介
 
 
     /// <summary>
