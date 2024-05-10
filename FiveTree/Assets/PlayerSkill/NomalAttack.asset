@@ -15,11 +15,12 @@ MonoBehaviour:
   attackEnum: 1
   skillName: 
   skillDamege: 0
-  skillCD: 0
+  skillCD: 1
   skillNeedConsume: 0
   skillNeedTime: 0
-  isNeedTarget: 0
+  skillIsNeedTarget: 0
   skillForTarget: 
   skillSpeed: 1
+  skillIsCanUse: 0
   skillImage: {fileID: 0}
   skillIntroduce: 

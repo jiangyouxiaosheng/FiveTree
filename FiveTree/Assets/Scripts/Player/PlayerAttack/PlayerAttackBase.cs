@@ -15,10 +15,10 @@ public class PlayerAttackBase :ScriptableObject
     public float skillCD = 0;//技能CD
     public int skillNeedConsume = 0;//消耗
     public float skillNeedTime = 0;//咏唱所需时间
-    public bool isNeedTarget;//是否为指定目标
+    public bool skillIsNeedTarget;//是否为指定目标
     public string skillForTarget = "";//目标
-    public float skillSpeed;
-
+    public float skillSpeed;//技能位移速度
+    public bool skillIsCanUse;//是否可以使用
 
   
 
@@ -81,11 +81,7 @@ public class PlayerAttackBase :ScriptableObject
         protected set { skillNeedTime = Math.Clamp(value, 0, float.MaxValue); }
     }
 
-    public bool IsNeedTarget
-    {
-        get { return isNeedTarget; }
-        protected set { isNeedTarget = value; }
-    }
+
     public string SkillForTarget
     {
         get { return skillForTarget; }

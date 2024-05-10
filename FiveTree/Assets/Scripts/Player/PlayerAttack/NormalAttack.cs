@@ -6,23 +6,15 @@ using UnityEngine.UIElements;
 
 public class NormalAttack : PoolObject
 {
-    public PlayerAttackBase attack;
+    private SkillData skillData;
 
     private void Start()
     {
-        
+        skillData = GetComponent<SkillData>();
     }
     private void Update()
     {
-        if (attack.skillCD > 0)
-        {
-            attack.skillCD -= Time.deltaTime;
-        }
-
-
-
-        Debug.LogError(attack.skillCD);
-      transform.Translate(Vector2.right * Time.deltaTime * attack.skillSpeed);
+      transform.Translate(Vector2.right * Time.deltaTime * skillData.playerAttackBase.skillSpeed);
     }
 
     private void OnDestroy()
