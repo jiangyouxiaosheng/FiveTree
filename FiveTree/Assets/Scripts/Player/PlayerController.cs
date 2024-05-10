@@ -2,19 +2,16 @@ using Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using ObjectPool;
 public class PlayerController : MonoBehaviour
 {
     //组件获取
     private Rigidbody2D _rigidbody2D;
 
-
-
- 
     private PlayerAttribute playerAttribute;
-    
-    
 
+
+   
     private void Awake()
     {
         playerAttribute = GetComponent<PlayerAttribute>();
@@ -22,10 +19,11 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();  
     }
     private void Update()
     {
+
         float xMove = Input.GetAxisRaw("Horizontal");
         float yMove = Input.GetAxisRaw("Vertical");
         Vector2 position = transform.position;

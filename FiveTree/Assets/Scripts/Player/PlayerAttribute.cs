@@ -21,7 +21,7 @@ namespace Player
         public int playerDef;
         public float playerMoveSpeed;
         public float playerAttackSpeed;
-
+        public Dictionary<string,List<PlayerAttackBase>> playerSkills = new Dictionary<string, List<PlayerAttackBase>>();
         [Header("玩家背包属性")]
         public int playerCoins; //玩家金币
         //public List<PlayerItem> playerItems = new List<PlayerItem>();   //玩家背包

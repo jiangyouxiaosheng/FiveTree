@@ -14,4 +14,5 @@ public class BuffDataBase : ScriptableObject
     /// buff展现的特效
     /// </summary>
     public GameObject prefab;
+
 }

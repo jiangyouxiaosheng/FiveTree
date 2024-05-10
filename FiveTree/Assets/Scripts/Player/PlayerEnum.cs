@@ -1,7 +1,7 @@
 /// <summary>
 /// Íæ¼Ò¹¥»÷ÀàĞÍ
 /// </summary>
-enum PlayerAttackEnum
+public enum PlayerAttackEnum
 {
     None,
     NormalAttack,
