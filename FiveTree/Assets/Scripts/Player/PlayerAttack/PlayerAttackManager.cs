@@ -8,6 +8,7 @@ public class PlayerAttackManager : ModuleSingleton<PlayerAttackManager>, IModule
 {
     public List<GameObject> playerSkills = new List<GameObject>();
 
+    private Vector2 mouseDir;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +18,10 @@ public class PlayerAttackManager : ModuleSingleton<PlayerAttackManager>, IModule
     
     void Update()
     {
+     
+    
+
         playerSkills[0].GetComponent<SkillData>().timer-=Time.deltaTime;
-       // SkillsCD();
-       //  playerSkills[0].playerAttackBase.skillIsCanUse = false;
         if (Input.GetKeyDown(KeyCode.J))
         {
             NormalAttackCD();
@@ -36,7 +38,8 @@ public class PlayerAttackManager : ModuleSingleton<PlayerAttackManager>, IModule
         if (playerSkills[0].GetComponent<SkillData>().timer <= 0)
         {
             playerSkills[0].GetComponent<SkillData>().UsedSkill();
-            PoolManager.Instance.GetGameObjectToPool<NormalAttack>("PlayerNormalAttack", PlayerAttribute.Instance.palyerAttackPoint.position, Quaternion.identity);
+           PoolManager.Instance.GetGameObjectToPool<NormalAttack>("PlayerNormalAttack", PlayerAttribute.Instance.palyerAttackPoint.position, Quaternion.identity);
+           
         }
      
 

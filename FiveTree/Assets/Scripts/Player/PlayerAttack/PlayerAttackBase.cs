@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "BulletData", menuName = "PlayerSkills/skillData", order = 0)]
+[CreateAssetMenu(fileName = "PlayerAttackBase", menuName = "PlayerSkills/skillData", order = 0)]
 public class PlayerAttackBase :ScriptableObject
 {
     [Header("技能基础数据")]
